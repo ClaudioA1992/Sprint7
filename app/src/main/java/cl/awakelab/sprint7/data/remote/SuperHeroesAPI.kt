@@ -8,10 +8,10 @@ import retrofit2.http.Path
 
 interface SuperHeroesAPI {
 
-    @GET("")
+    @GET("superheroes/")
     suspend fun getAllSuperHeroes(): Response<List<SuperHero>>
 
-    @GET("{id}")
+    @GET("superheroes/{id}")
     suspend fun getDetail(@Path("id") id: Int): Response<SuperHeroDetail>
 
 }

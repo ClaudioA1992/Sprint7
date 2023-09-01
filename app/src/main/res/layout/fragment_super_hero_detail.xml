@@ -29,71 +29,80 @@
                 android:id="@+id/textViewDetailName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
                 android:id="@+id/textViewDetailOrigin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textViewDetailName"
+                app:layout_constraintStart_toStartOf="@+id/textViewDetailName"
                 app:layout_constraintTop_toBottomOf="@+id/textViewDetailName" />
 
             <TextView
                 android:id="@+id/textViewDetailPower"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textViewDetailOrigin"
+                app:layout_constraintStart_toStartOf="@+id/textViewDetailOrigin"
                 app:layout_constraintTop_toBottomOf="@+id/textViewDetailOrigin" />
 
             <TextView
                 android:id="@+id/textViewDetailCreationYear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="@+id/textViewDetailPower"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewDetailPower"
                 app:layout_constraintTop_toBottomOf="@+id/textViewDetailPower" />
 
             <TextView
                 android:id="@+id/textViewColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="297dp"
-                tools:layout_editor_absoluteY="238dp" />
+                app:layout_constraintEnd_toEndOf="@+id/textViewDetailCreationYear"
+                app:layout_constraintStart_toStartOf="@+id/textViewDetailCreationYear"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDetailCreationYear" />
 
             <TextView
                 android:id="@+id/textViewTranslation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="289dp"
-                tools:layout_editor_absoluteY="326dp" />
+                app:layout_constraintEnd_toEndOf="@+id/textViewColor"
+                app:layout_constraintStart_toStartOf="@+id/textViewColor"
+                app:layout_constraintTop_toBottomOf="@+id/textViewColor" />
 
             <Button
                 android:id="@+id/buttonVote"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="56dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="24dp"
-                android:text="Button"
+                android:text="@string/hero_vote"
+                app:icon="@drawable/baseline_email_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <EditText
                 android:id="@+id/editTextNumberSigned"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="24dp"
                 android:ems="10"
+                android:hint="@string/phonenumber_hint"
                 android:inputType="numberSigned"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/buttonVote"

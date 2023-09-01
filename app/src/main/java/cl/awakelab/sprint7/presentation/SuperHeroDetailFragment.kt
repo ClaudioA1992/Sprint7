@@ -36,7 +36,7 @@ class SuperHeroDetailFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
+            param1 = it.getString("id")
             param2 = it.getString(ARG_PARAM2)
         }
     }
@@ -57,16 +57,16 @@ class SuperHeroDetailFragment : Fragment() {
             if(it!=null) {
                 detail = it
                 Log.d("Into live data", "Objeto: ${it}")
-                binding.textViewDetailName.text = it.name
-                binding.textViewColor.text = it.color
-                binding.textViewDetailOrigin.text = it.origin
-                binding.textViewDetailPower.text = it.power
-                binding.textViewDetailCreationYear.text = it.creationYear.toString()
+                binding.textViewDetailName.text = getString(R.string.hero_name) + " " + it.name
+                binding.textViewColor.text = getString(R.string.color) + " " + it.color
+                binding.textViewDetailOrigin.text = getString(R.string.origin) + " " + it.origin
+                binding.textViewDetailPower.text = getString(R.string.power) + " " + it.power
+                binding.textViewDetailCreationYear.text = getString(R.string.creation_year) + " " + it.creationYear.toString()
                 binding.imageView.load(it.imageUrl)
                 if(it.translation) {
-                    binding.textViewTranslation.text = R.string.translation_true.toString()
+                    binding.textViewTranslation.text = getString(R.string.translation) + " " + getString(R.string.translation_true)
                 } else {
-                    binding.textViewTranslation.text = R.string.translation_false.toString()
+                    binding.textViewTranslation.text = getString(R.string.translation) + " " + getString(R.string.translation_false)
                 }
             }
         }
@@ -80,8 +80,9 @@ class SuperHeroDetailFragment : Fragment() {
             intent.putExtra(Intent.EXTRA_TEXT, "Hola\n" +
                     "Quiero que el siguiente super héroe ${detail.name} aparezca, en la nueva edición de\n" +
                     "biografías animadas.\n" +
-                    "Número contacto: +56_________\n" +
+                    "Número contacto: +56${binding.editTextNumberSigned.text}\n" +
                     "Gracias.")
+            startActivity(intent)
         }
     }
 

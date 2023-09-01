@@ -1,5 +1,6 @@
 package cl.awakelab.sprint7.presentation
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -19,11 +20,12 @@ class SuperHeroAdapter: RecyclerView.Adapter<SuperHeroAdapter.SuperHeroViewHolde
         RecyclerView.ViewHolder(superHeroBinding.root) {
         fun bind(superHero: SuperHeroEntity) {
             superHeroBinding.imageViewSuperHero.load(superHero.imageUrl)
-            superHeroBinding.textViewName.text = superHero.name
-            superHeroBinding.textViewOrigin.text = superHero.origin
-            superHeroBinding.textViewPower.text = superHero.power
-            superHeroBinding.textViewCreationYear.text = superHero.creationYear.toString()
+            superHeroBinding.textViewName.text = superHeroBinding.root.getContext().getResources().getString(R.string.hero_name) + " " + superHero.name
+            superHeroBinding.textViewOrigin.text = superHeroBinding.root.getContext().getResources().getString(R.string.origin) + " " + superHero.origin
+            superHeroBinding.textViewPower.text = superHeroBinding.root.getContext().getResources().getString(R.string.power) + " " +  superHero.power
+            superHeroBinding.textViewCreationYear.text = superHeroBinding.root.getContext().getResources().getString(R.string.creation_year) + " " + superHero.creationYear.toString()
             var bundle: Bundle = Bundle()
+            bundle.putString("id", superHero.id.toString())
             superHeroBinding.constraintLayoutSuperHeroItem.setOnClickListener() {
                 Navigation.findNavController(superHeroBinding.root).navigate(
                     R.id.action_superHeroesFragment_to_superHeroDetailFragment , bundle)
