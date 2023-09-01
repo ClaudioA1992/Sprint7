@@ -9,5 +9,14 @@
         android:id="@+id/superHeroesFragment"
         android:name="cl.awakelab.sprint7.presentation.SuperHeroesFragment"
         android:label="fragment_super_heroes"
-        tools:layout="@layout/fragment_super_heroes" />
+        tools:layout="@layout/fragment_super_heroes" >
+        <action
+            android:id="@+id/action_superHeroesFragment_to_superHeroDetailFragment"
+            app:destination="@id/superHeroDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/superHeroDetailFragment"
+        android:name="cl.awakelab.sprint7.presentation.SuperHeroDetailFragment"
+        android:label="fragment_super_hero_detail"
+        tools:layout="@layout/fragment_super_hero_detail" />
 </navigation>
