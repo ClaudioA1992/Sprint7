@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sprint 7</string>
+    <string name="disconnected_detail">No internet connection. Super hero detail retrieved from local database.</string>
+    <string name="disconnected_superhero">No internet connection. Super heroes retrieved from local database.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

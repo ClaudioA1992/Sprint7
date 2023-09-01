@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/superHeroesFragment">
+
+    <fragment
+        android:id="@+id/superHeroesFragment"
+        android:name="cl.awakelab.sprint7.presentation.SuperHeroesFragment"
+        android:label="fragment_super_heroes"
+        tools:layout="@layout/fragment_super_heroes" />
+</navigation>
